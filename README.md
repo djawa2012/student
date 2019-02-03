@@ -1,27 +1,27 @@
 # student
 
-#Run
+# Run
 This app can run as one of following ways.
 
-#Gradle task
+## Gradle task
 `./gradlew run`
 
-#java command line
+## java command line
 `java -jar ./build/libs/student<version>.jar
 
-#Docker
+## Docker
 First build docker image using script `docker-build.sh` then start a demon contain using script `docker-start.sh`
 
-#Example Urls:
+# Example Urls:
 
-#Ping or healthcheck
+## Ping or healthcheck
 `http://localhost:8080/student/ping`
 
-#Student Search
+## Student Search
 `http://localhost:8080/student/search?first=John` OR
 `http://localhost:8080/student/search?last=smith` OR
 `http://localhost:8080/student/search?first=John&last=Smith` OR
 
-#Student Detail
+## Student Detail
 `http://localhost:8080/student/John/Smith`
 
