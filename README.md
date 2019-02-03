@@ -1,16 +1,16 @@
 # student
 
 # Run
-This app can run as one of following ways.
+This app runs on port `8080` and maps in-memory json database to local `/tmp` directory. It can run as one of the following methods:
 
 ## Gradle task
 `./gradlew run`
 
 ## java command line
-`java -jar ./build/libs/student<version>.jar
+`java -jar ./build/libs/student<version>.jar` (Produced after `./gradlew clean build`)
 
 ## Docker
-First build docker image using script `docker-build.sh` then start a demon contain using script `docker-start.sh`
+First build docker image using script `docker-build.sh` then start a daemon container using script `docker-start.sh`
 
 # Example Urls:
 
@@ -18,10 +18,14 @@ First build docker image using script `docker-build.sh` then start a demon conta
 `http://localhost:8080/student/ping`
 
 ## Student Search
-`http://localhost:8080/student/search?first=John` OR
-`http://localhost:8080/student/search?last=smith` OR
-`http://localhost:8080/student/search?first=John&last=Smith` OR
+`http://localhost:8080/student/_search?first=John` OR
+
+`http://localhost:8080/student/_search?last=smith` OR
+
+`http://localhost:8080/student/_search?first=John&last=Smith`
 
 ## Student Detail
 `http://localhost:8080/student/John/Smith`
 
+# Api Documentation
+`http://localhost:8080/swagger.json`
